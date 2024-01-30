@@ -1,4 +1,3 @@
-import Color from 'color'
 import {
   GestureResponderEvent,
   PanResponder,
@@ -40,7 +39,6 @@ function AnalogClock({
     focused?: undefined | PossibleClockTypes
   }) => any
 }) {
-  const theme = useTheme()
   const { mode } = React.useContext(DisplayModeContext)
   // used to make pointer shorter if hours are selected and above 12
   const shortPointer = hours >= 12 && is24Hour

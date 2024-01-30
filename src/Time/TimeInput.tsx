@@ -60,8 +60,6 @@ function TimeInput(
 
   const highlighted = inputType === inputTypes.picker ? pressed : inputFocused
 
-  const { color, backgroundColor } = useInputColors(highlighted)
-
   let formattedValue = controlledValue
   if (!inputFocused) {
     formattedValue =

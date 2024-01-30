@@ -17,18 +17,6 @@ export default function AmPmSwitcher({
 }) {
   const { setMode, mode } = React.useContext(DisplayModeContext)
   const theme = useTheme()
-  const backgroundColor = useMemo<string>(() => {
-    if (theme.isV3) {
-      return theme.colors.outline
-    }
-    return Color(
-      theme.dark
-        ? Color(theme.colors.surface).lighten(1.2).hex()
-        : theme.colors.surface
-    )
-      .darken(0.1)
-      .hex()
-  }, [theme])
 
   const isAM = mode === 'AM'
   return (
@@ -83,7 +71,7 @@ function SwitchButton({
   disabled: boolean
 }) {
   const theme = useTheme()
-  const { backgroundColor, color } = useSwitchColors(selected)
+  const { backgroundColor } = useSwitchColors(selected)
 
   let textFont = theme?.isV3
     ? theme.fonts.titleMedium
