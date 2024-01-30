@@ -47,9 +47,9 @@ export function TimePickerModal({
   onConfirm,
   hours,
   minutes,
-  label = 'Select time',
+  label = 'SELECT TIME',
   uppercase: _uppercase,
-  cancelLabel = 'Cancel',
+  cancelLabel = 'Clear',
   confirmLabel = 'Ok',
   animationType = 'none',
   locale,
@@ -170,9 +170,7 @@ export function TimePickerModal({
                       : theme.dark
                       ? overlay(10, theme.colors.surface)
                       : theme.colors.surface,
-                  borderRadius: theme.isV3
-                    ? theme.roundness * 6
-                    : theme.roundness,
+                  borderRadius: 8,
                 },
               ]}
             >
@@ -217,10 +215,12 @@ export function TimePickerModal({
                   accessibilityLabel="toggle keyboard"
                 />
                 <View style={styles.fill} />
-                <Button onPress={onDismiss} uppercase={uppercase}>
+                <Button style={styles.cancelButtonStyle} onPress={onDismiss} uppercase={uppercase}>
                   {cancelLabel}
                 </Button>
                 <Button
+                  style={styles.okButtonStyle}
+                  textColor='#FFFFFF'
                   onPress={() =>
                     onConfirm({ hours: localHours, minutes: localMinutes })
                   }
@@ -251,6 +251,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
+  },
+  cancelButtonStyle:{
+
+  },
+  okButtonStyle:{
+    backgroundColor:'#72BF44',
+    borderRadius:10
+
   },
   keyboardView: {
     justifyContent: 'center',

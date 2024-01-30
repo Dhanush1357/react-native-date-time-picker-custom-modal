@@ -35,7 +35,7 @@ function TimeInput(
     onPress,
     onChanged,
     inputType,
-    inputFontSize = 57,
+    inputFontSize = 50,
     ...rest
   }: TimeInputProps,
   ref: any
@@ -78,19 +78,18 @@ function TimeInput(
           styles.input,
           // eslint-disable-next-line react-native/no-inline-styles
           {
-            color,
+            color: highlighted ? '#72BF44' : 'black',
             fontSize: inputFontSize,
-            backgroundColor,
+            backgroundColor:highlighted ? '#e3f2da' : '#f5f6f8',
             borderRadius: theme.roundness * 2,
             borderColor:
               theme.isV3 && highlighted
                 ? theme.colors.onPrimaryContainer
                 : undefined,
-            borderWidth: theme.isV3 && highlighted ? 2 : 0,
             height: inputType === inputTypes.keyboard ? 72 : 80,
           },
         ]}
-        maxFontSizeMultiplier={1.5}
+        maxFontSizeMultiplier={1}
         value={formattedValue}
         maxLength={2}
         onFocus={() => setInputFocused(true)}
@@ -129,6 +128,8 @@ const styles = StyleSheet.create({
   input: {
     textAlign: 'center',
     textAlignVertical: 'center',
+    justifyContent:'center',
+    alignItems:'center',
     width: 96,
   },
   buttonOverlay: { overflow: 'hidden' },

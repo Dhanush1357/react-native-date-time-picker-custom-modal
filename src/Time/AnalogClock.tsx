@@ -128,11 +128,7 @@ function AnalogClock({
       style={[
         styles.clock,
         {
-          backgroundColor: theme.isV3
-            ? theme.colors.surfaceVariant
-            : theme.dark
-            ? Color(theme.colors.surface).lighten(1.4).hex()
-            : Color(theme.colors.surface).darken(0.1).hex(),
+          backgroundColor:'white',
         },
       ]}
       // @ts-ignore -> https://github.com/necolas/react-native-web/issues/506
@@ -142,7 +138,7 @@ function AnalogClock({
         style={[
           styles.line,
           {
-            backgroundColor: theme.colors.primary,
+            backgroundColor: '#72BF44',
             transform: [
               { rotate: -90 + pointerNumber * degreesPerNumber + 'deg' },
               {
@@ -163,7 +159,7 @@ function AnalogClock({
         pointerEvents="none"
       >
         <View
-          style={[styles.endPoint, { backgroundColor: theme.colors.primary }]}
+          style={[styles.endPoint, { backgroundColor: '#72BF44' }]}
         />
       </View>
       <View
@@ -174,7 +170,7 @@ function AnalogClock({
           style={[
             styles.middlePoint,
             {
-              backgroundColor: theme.colors.primary,
+              backgroundColor: '#72BF44',
             },
           ]}
         />

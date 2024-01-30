@@ -37,7 +37,7 @@ export default function AmPmSwitcher({
         styles.root,
         // eslint-disable-next-line react-native/no-inline-styles
         {
-          borderColor: backgroundColor,
+          borderColor: '#BEBEBE',
           borderRadius: theme.roundness * 2,
           height: inputType === inputTypes.keyboard ? 72 : 80,
           marginBottom: inputType === 'keyboard' ? 24 : 0,
@@ -55,7 +55,7 @@ export default function AmPmSwitcher({
         selected={isAM}
         disabled={isAM}
       />
-      <View style={[styles.switchSeparator, { backgroundColor }]} />
+      <View style={[styles.switchSeparator, { backgroundColor:'#BEBEBE' }]} />
       <SwitchButton
         label="PM"
         onPress={() => {
@@ -109,7 +109,7 @@ function SwitchButton({
           style={[
             {
               ...textFont,
-              color: color,
+              color: selected ? '#72BF44' : 'black',
             },
           ]}
         >
