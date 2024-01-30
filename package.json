@@ -1,5 +1,5 @@
 {
-  "name": "react-native-date-time-picker-custom-modal",
+  "name": "react-native-date-time-picker-modal-custom",
   "version": "0.1.0",
   "description": "Performant Date Picker for React Native",
   "main": "lib/commonjs/index",
