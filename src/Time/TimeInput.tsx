@@ -13,7 +13,6 @@ import {
   inputTypes,
   PossibleClockTypes,
   PossibleInputTypes,
-  useInputColors,
 } from './timeUtils'
 
 interface TimeInputProps

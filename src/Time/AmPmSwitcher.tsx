@@ -1,8 +1,6 @@
 import * as React from 'react'
 import { View, StyleSheet } from 'react-native'
 import { MD2Theme, Text, TouchableRipple, useTheme } from 'react-native-paper'
-import { useMemo } from 'react'
-import Color from 'color'
 import { inputTypes, PossibleInputTypes, useSwitchColors } from './timeUtils'
 import { DisplayModeContext } from '../contexts/DisplayModeContext'
 
